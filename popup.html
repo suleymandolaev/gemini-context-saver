@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Chat Scraper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>LLM Chat Scraper</h2>
+        <div id="status" class="status idle">Idle</div>
+
+        <div class="actions">
+            <button id="startBtn" class="btn primary">1. Scroll & Scrape</button>
+            <button id="stopBtn" class="btn danger" disabled>Stop</button>
+            <button id="copyBtn" class="btn success" style="display: none;">2. Copy to Clipboard</button>
+        </div>
+
+        <textarea id="resultArea" style="opacity: 0; height: 1px; width: 1px; position: absolute;"></textarea>
+
+        <footer>
+            <p class="hint">Ensure you are on a Gemini or ChatGPT page.</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

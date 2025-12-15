@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Gemini Context Saver",
+    "version": "1.0",
+    "description": "Scrapes and saves the entire conversation history of a Google Gemini chat loop with auto-scroll capability.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "https://gemini.google.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://gemini.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
